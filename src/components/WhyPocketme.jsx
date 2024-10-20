@@ -27,12 +27,12 @@ const cards = [
 function WhyPocketme(){
     return (
     <div>
-        <div className="px-20 my-20">
+        <div className="px-10 md:px-20 my-20">
             <div className="text-center my-5 text-3xl font-bold">
                 Why Pocketme
             </div>
             <img className="mx-auto mb-10" src="https://pocketme.in/assets/images/heading-line-dec.png" alt="" />
-            <div className="flex">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
                 {cards.map((item) => (
                     <Card url={item.url} title={item.title} description={item.description} />
                 ))}

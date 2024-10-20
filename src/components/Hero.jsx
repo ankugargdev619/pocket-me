@@ -13,7 +13,7 @@ function Hero(){
                 duration:1,
                 delay:1
             }}
-            className="flex bg-mainColor px-20 py-12 justify-start gap-16 h-screen">
+            className="flex bg-mainColor px-10 md:px-20 py-12 justify-start gap-16 flex-col md:flex-row ">
             <motion.div className="max-w-xl flex flex-col justify-center gap-10 "
                 variants={{
                     away:{x:-1500},
@@ -28,12 +28,12 @@ function Hero(){
             >
                 <h1 className="text-5xl font-bold leading-normal">Quick, easy and hassle-free personal loans</h1>
                 <p>Get instant access to personal loan upto ₹1,00,000 with Pocketme.</p>
-                <div className="flex gap-10">
+                <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 items-center">
                     <a href="#">
-                        <img src="https://pocketme.in/assets/images/google-play.png" alt="" />
+                        <img className="w-80" src="https://pocketme.in/assets/images/google-play.png" alt="" />
                     </a>
                     <a href="#">
-                        <img src="https://pocketme.in/assets/images/app-store.png" alt="" />
+                        <img className="w-80" src="https://pocketme.in/assets/images/app-store.png" alt="" />
                     </a>
                 </div>
             </motion.div>

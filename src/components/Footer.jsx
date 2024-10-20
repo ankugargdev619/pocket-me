@@ -90,7 +90,7 @@ const footerSections = [
 function Footer(){
     return(
         <div className="bg-mainColor px-20 py-10 text-white">
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row justify-between">
                 {footerSections.map((item)=>(
                     <div className="my-10">
                         <h3 className="mb-5 text-xl font-bold">{item.header}</h3>

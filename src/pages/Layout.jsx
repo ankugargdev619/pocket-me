@@ -15,7 +15,7 @@ function Layout(){
                 duration : 1
             }}
         >
-            <nav className='px-20 flex items-center justify-between gap-10 sticky top-0 bg-white z-50 border-b-2'>
+            <nav className='px-10 md:px-20 flex items-center justify-between gap-10 sticky top-0 bg-white z-50 border-b-2'>
                 <img src="https://pocketme.in/assets/images/logo.svg" alt="logo" />
                 <div className='flex gap-10'>
                     <NavLink className={linkClass} to="/">Home</NavLink>
