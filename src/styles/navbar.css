@@ -1,0 +1,50 @@
+:root{
+    --main-color : rgb(72, 90, 168);
+}
+
+.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.border-hide{
+    border-bottom: none;
+    }
+
+.ham-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: max-content;
+}
+
+.ham-menu::before ,
+.ham-menu::after,
+.ham-menu div
+{
+    content: "";
+    background-color: var(--main-color);
+    width: 40px;
+    height: 4px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.open::before {
+    translate:0 4px;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.open::after {
+    translate: 0 -4px;
+    transform-origin: center center;
+    transform : rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.open div{
+    display: none;
+    transition: all 1s ease-in-out;
+}

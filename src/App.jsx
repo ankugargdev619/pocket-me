@@ -1,16 +1,44 @@
-import './App.css'
-import Header from './components/Header'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import AboutUsPage from "./pages/AboutUsPage";
+import HowItWorks from "./pages/HowItWorks";
+import ContactUs from "./pages/ContactUs";
+import WhyPocketmePage from "./pages/WhyPocketmePage";
+import Loader from "./components/Loader";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [loading,setLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false);
+    },3000)
+  },[])
 
   return (
-    <div className="container mx-auto mb-8 px-8">
-      <Header />
-      <h1 className="mt-8 text-center text-3xl font-bold">
-        Hamburger menu in Tailwind & React
-      </h1>
+    <div>
+        {loading ? <Loader /> : 
+          <div>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={< Layout/>}>
+                  <Route index element={<Home/>} />
+                  <Route path="about" element={<AboutUsPage/>} />
+                  <Route path="why-pocketme" element={<WhyPocketmePage/>} />
+                  <Route path="how-it-works" element={<HowItWorks/>} />
+                  <Route path="contact-us" element={<ContactUs/>} />
+                </Route>
+              </Routes>
+            </BrowserRouter>
+          </div>
+        }
     </div>
   )
 }
 
-export default App
+
+
+export default App;
