@@ -27,7 +27,7 @@ const navLinks = [
 ]
 
 function Layout(){
-    const [menuOpen,setMenuOpen] = useState(true);
+    const [menuOpen,setMenuOpen] = useState(false);
 
     function toggleMenu(){
         setMenuOpen((menuOpen)=>!menuOpen);
@@ -45,13 +45,13 @@ function Layout(){
             }}
         >
             <nav className='flex px-10 md:px-20 items-center justify-between gap-10 sticky top-0 bg-white z-50 border-b-2'>
-                <img className="w-36 md:w-40 lg:w-48" src="https://pocketme.in/assets/images/logo.svg" alt="logo" />
-                <div className='hidden md:flex flex gap-10'>
+                <img className="w-36 md:w-40 lg:w-48 z-100" src="https://pocketme.in/assets/images/logo.svg" alt="logo" />
+                <div className='hidden md:flex flex gap-10 z-100'>
                     {navLinks.map((link) => (
                         <NavLink className="py-8" to={link.routePath} >{link.routeName}</NavLink>
                     ))}
                 </div>
-                <div onClick={toggleMenu} className="block md:hidden">
+                <div onClick={toggleMenu} className="block md:hidden z-100">
                     {menuOpen?<>
                         <div className="ham-menu open">
                             <div/>
@@ -67,7 +67,7 @@ function Layout(){
                                     transition={{
                                         duration : 1
                                     }}
-                                className="absolute right-0 top-16 bg-white flex flex-col px-10 w-screen">
+                                className="absolute right-0 top-16 bg-white flex flex-col px-10 w-screen z-50">
                                 
                                 {navLinks.map((link) => (
                                 <NavLink className="py-8 border-hide" to={link.routePath} >{link.routeName}</NavLink>
