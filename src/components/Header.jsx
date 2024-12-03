@@ -1,84 +1,67 @@
+import {motion} from "framer-motion";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { navlinkAtom } from "../atoms/navlinks";
 
-export default function Header() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+export const Header = () => {
+    const navLinks = useRecoilValue(navlinkAtom);
+    const [menuOpen,setMenuOpen] = useState(false);
+    function toggleMenu(){
+        setMenuOpen((menuOpen)=>!menuOpen);
+    }
 
-  return (
-    <div className="flex items-center justify-between border-b border-gray-400 py-8">
-      <a href="/">
-        <img src="https://designbygio.it/images/logo.png" alt="logo" />
-      </a>
-      <nav>
-        <section className="MOBILE-MENU flex lg:hidden">
-          <div
-            className="HAMBURGER-ICON space-y-2"
-            onClick={() => setIsNavOpen((prev) => !prev)}
-          >
-          </div>
+    return <>
+        <motion.div 
+            variants={{
+                hidden:{y:-100},
+                visible:{y:0},
+            }}
+            initial="hidden"
+            animate="visible" 
+            transition={{
+                duration : 1
+            }}
+        >
+            <nav className='flex px-10 md:px-20 items-center justify-between gap-10 sticky top-0 bg-white z-50 border-b-2'>
+                <img className="w-36 md:w-40 lg:w-48 z-100" src="https://pocketme.in/assets/images/logo.svg" alt="logo" />
+                <div className='hidden md:flex flex gap-10 z-100'>
+                    {navLinks.map((link,idx) => (
+                        <NavLink key={idx} className="py-8" to={link.routePath} >{link.routeName}</NavLink>
+                    ))}
+                </div>
+                <div onClick={toggleMenu} className="block md:hidden z-100">
+                    {menuOpen?<>
+                        <div className="ham-menu open">
+                            <div/>
+                        </div>
+                        {
+                            <motion.div
+                                    variants={{
+                                        hidden:{y:-500},
+                                        visible:{y:0},
+                                    }}
+                                    initial="hidden"
+                                    animate="visible" 
+                                    transition={{
+                                        duration : 1
+                                    }}
+                                className="absolute right-0 top-16 bg-white flex flex-col px-10 w-screen z-50">
+                                
+                                {navLinks.map((link) => (
+                                <NavLink className="py-8 border-hide" to={link.routePath} >{link.routeName}</NavLink>
+                                ))}
+                            </motion.div>
+                        }
+                    </>
+                    :
+                    <div className="ham-menu">
+                        <div />
+                    </div>
+                    }
+                </div>
+            </nav>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
-            <div
-              className="absolute top-0 right-0 px-8 py-8"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <svg
-                className="h-8 w-8 text-gray-600"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </div>
-            <ul className="flex flex-col items-center justify-between min-h-[250px]">
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/about">About</a>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/portfolio">Portfolio</a>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
-    </div>
-  );
+        </motion.div>
+    </>
 }
