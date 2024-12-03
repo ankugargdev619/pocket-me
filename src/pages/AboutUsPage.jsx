@@ -6,7 +6,6 @@ function AboutUsPage(){
     return <div>
         <AboutUs />
         <DownloadBanner />
-        <Footer />
     </div>
 }
 

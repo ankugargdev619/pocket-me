@@ -6,7 +6,6 @@ function HowItWorks(){
     return <>
        <Hero />
        <WhyPocketme />
-       <Footer />
     </>
 }
 

@@ -5,7 +5,6 @@ function WhyPocketmePage(){
     return (
     <div>
         <WhyPocketme />
-        <Footer />
     </div>
     )
 }

@@ -2,6 +2,7 @@ import { Outlet, Link, NavLink} from "react-router-dom";
 import {motion} from "framer-motion";
 import "../styles/navbar.css";
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 const navLinks = [
     {
@@ -84,6 +85,7 @@ function Layout(){
             </nav>
 
             <Outlet/>
+            <Footer />
         </motion.div>
     )
 }

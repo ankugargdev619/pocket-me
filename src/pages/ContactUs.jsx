@@ -6,7 +6,6 @@ function ContactUs(){
     return <div >
        <Hero />
        <WhyPocketme />
-       <Footer />
     </div>
 }
 
