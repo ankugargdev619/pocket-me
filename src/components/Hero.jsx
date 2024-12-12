@@ -32,9 +32,10 @@ function Hero(){
                     <a href="#">
                         <img className="w-80" src="https://pocketme.in/assets/images/google-play.png" alt="" />
                     </a>
+                    {/*
                     <a href="#">
                         <img className="w-80" src="https://pocketme.in/assets/images/app-store.png" alt="" />
-                    </a>
+                    </a>*/}
                 </div>
             </motion.div>
             <motion.div className="flex-grow flex justify-center"

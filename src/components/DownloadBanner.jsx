@@ -9,9 +9,9 @@ function DownloadBanner(){
                     <a className="mw-10" href="#">
                         <img src="https://pocketme.in/assets/images/google-play.png" alt="" />
                     </a>
-                    <a href="#">
+                    {/*<a href="#">
                         <img src="https://pocketme.in/assets/images/app-store.png" alt="" />
-                    </a>
+                    </a>*/}
             </div>
         </div>
     )
