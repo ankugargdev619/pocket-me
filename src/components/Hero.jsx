@@ -13,7 +13,7 @@ function Hero(){
                 duration:1,
                 delay:1
             }}
-            className="flex w-full bg-mainColor px-10 md:px-20 py-12 justify-start gap-16 flex-col md:flex-row ">
+            className="z-10 flex w-full bg-mainColor px-10 md:px-20 py-12 justify-start gap-16 flex-col md:flex-row ">
             <motion.div className="flex flex-col justify-center gap-10 "
                 variants={{
                     away:{x:-1500},

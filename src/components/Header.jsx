@@ -13,6 +13,7 @@ export const Header = () => {
 
     return <>
         <motion.div 
+            className="sticky top-0 z-50"
             variants={{
                 hidden:{y:-100},
                 visible:{y:0},
@@ -23,9 +24,9 @@ export const Header = () => {
                 duration : 1
             }}
         >
-            <nav className='flex px-10 md:px-20 items-center justify-between gap-10 sticky top-0 bg-white z-50 border-b-2'>
+            <nav className='flex px-10 md:px-20 items-center justify-between gap-10 bg-white z-50 border-b-2'>
                 <img className="w-36 md:w-40 lg:w-48 z-100" src="https://pocketme.in/assets/images/logo.svg" alt="logo" />
-                <div className='hidden md:flex flex gap-10 z-100'>
+                <div className='hidden md:flex gap-10 '>
                     {navLinks.map((link,idx) => (
                         <NavLink key={idx} className="py-8" to={link.routePath} >{link.routeName}</NavLink>
                     ))}
