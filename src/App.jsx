@@ -9,6 +9,7 @@ import WhyPocketmePage from "./pages/WhyPocketmePage";
 import Loader from "./components/Loader";
 import { useEffect, useState } from "react";
 import { RecoilRoot } from "recoil";
+import { ScrollToTop } from "./utils/ScrollToTop";
 
 function App() {
   const [loading,setLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
           {loading ? <Loader /> : 
             <div>
               <BrowserRouter>
+                <ScrollToTop />
                 <Routes>
                   <Route path="/" element={< Layout/>}>
                     <Route index element={<Home/>} />
