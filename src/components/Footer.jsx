@@ -5,7 +5,8 @@ const CIN = "U74909MH2024PTC424684";
 const Year = "2024";
 
 function Footer(){
-     const footerSections = useRecoilValue(footerAtom)
+     const footerSections = useRecoilValue(footerAtom);
+     
     return(
         <div className="bg-mainColor px-20 py-10 text-white">
             <div className="flex flex-col md:flex-row justify-between">
@@ -23,7 +24,7 @@ function Footer(){
                 ))}
                 <div  className="my-10 pr-10" >
                     <div className="text-xl font-bold">About Our Company</div>
-                    <img src="https://pocketme.in/assets/images/logo.svg" alt="logo" />
+                    <img src="../src/assets/images/logo.svg" alt="logo" />
                 </div>
             </div>
 
