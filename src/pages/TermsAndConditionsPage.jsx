@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import { Term } from "../components/Term"
 
 
 export const TermsAndConditionsPage = () => {
+    const navigate = useNavigate();
     return <>
         <div>
         <div className="px-10 md:px-20 mt-8 mb-20">
@@ -20,7 +22,7 @@ export const TermsAndConditionsPage = () => {
             </Term>
 
             <Term title="Privacy">
-                <p>Any personal information submitted in connection with your use of the Offerings or the Site is subject to Our Privacy Policy located at <a className="text-blue-500" href="/privacy-policy">pocketme.in/privacy-policy</a>.</p>
+                <p>Any personal information submitted in connection with your use of the Offerings or the Site is subject to Our Privacy Policy located at <a className="text-blue-500 cursor-pointer" onClick={()=>{navigate("/privacy-policy")}}>pocketme.in/privacy-policy</a>.</p>
             </Term>
 
             <Term title="Registration">
