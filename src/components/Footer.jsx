@@ -24,7 +24,7 @@ function Footer(){
                 ))}
                 <div  className="my-10 pr-10" >
                     <div className="text-xl font-bold">About Our Company</div>
-                    <img src="/public/logo.svg" alt="logo" />
+                    <img src="/logo.svg" alt="logo" />
                 </div>
             </div>
 

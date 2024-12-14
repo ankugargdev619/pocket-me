@@ -7,10 +7,10 @@ function DownloadBanner(){
             <p>Instantly withdraw money from your credit limit of up to ₹1,00,000! No paperwork, ever</p>
             <div className="flex gap-10 justify-center mt-10">
                     <a className="mw-10" href="#">
-                        <img src="/public/google-play.png" alt="" />
+                        <img src="/google-play.png" alt="" />
                     </a>
                     {/*<a href="#">
-                        <img src="/public/app-store.png" alt="" />
+                        <img src="/app-store.png" alt="" />
                     </a>*/}
             </div>
         </div>

@@ -8,7 +8,7 @@ export const TermsAndConditionsPage = () => {
             <div className="text-center my-5 text-3xl font-bold">
                Terms and Conditions
             </div>
-            <img className="mx-auto mb-10" src="public/heading-line-dec.png" alt="" />
+            <img className="mx-auto mb-10" src="/heading-line-dec.png" alt="" />
 
             <Term title="General">
                 <p>This Agreement is a contract between you and Pocketme and applies to your use of the Pocketme Services (the "Services"). By registering for the Services, you must read, agree with, and accept all of the terms and conditions contained in this Agreement. You agree that any use by you of the Services shall constitute your acceptance of the Agreement, and we recommend that you store or print-off a copy of the Agreement (including all policies) for your records.</p>

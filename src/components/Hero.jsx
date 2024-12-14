@@ -30,11 +30,11 @@ function Hero(){
                 <p>Get instant access to personal loan upto ₹1,00,000 with Pocketme.</p>
                 <div className="flex flex-col md:flex-row gap-10 items-center">
                     <a href="#">
-                        <img className="w-80" src="/public/google-play.png" alt="" />
+                        <img className="w-80" src="/google-play.png" alt="" />
                     </a>
                     {/*
                     <a href="#">
-                        <img className="w-80" src="/public/app-store.png" alt="" />
+                        <img className="w-80" src="/app-store.png" alt="" />
                     </a>*/}
                 </div>
             </motion.div>
@@ -50,7 +50,7 @@ function Hero(){
                     delay:1
                 }}
             >
-                <img className="max-w-xs self-center" src="/public/slider-dec.png" alt="slider" />
+                <img className="max-w-xs self-center" src="/slider-dec.png" alt="slider" />
             </motion.div>
         </motion.div>
     )

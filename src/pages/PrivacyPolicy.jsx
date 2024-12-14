@@ -5,7 +5,7 @@ export const PrivacyPolicy = ()=>{
             <div className="text-center my-5 text-3xl font-bold">
             Privacy Policy
             </div>
-            <img className="mx-auto mb-10" src="public/heading-line-dec.png" alt="" />
+            <img className="mx-auto mb-10" src="/heading-line-dec.png" alt="" />
             
 
             <div className="text-justify">
