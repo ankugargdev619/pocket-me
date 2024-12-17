@@ -11,9 +11,9 @@ export const Question = (props) => {
     }
 
     return <div className="w-full rounded-lg mb-2">
-        <div className="flex items-center justify-between text-lg md:text-xl text-white bg-mainColor font-bold mb-2 px-4 py-2 rounded-lg">
+        <div onClick={handleVisibility}  className="flex items-center justify-between text-lg md:text-xl text-white bg-mainColor font-bold mb-2 px-4 py-2 rounded-lg">
             {props.question}
-            <div  onClick={handleVisibility} >
+            <div>
                 {isVisible ? <MinusIcon /> : <PlusIcon />}
             </div>
             </div>
