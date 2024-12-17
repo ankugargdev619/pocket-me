@@ -17,7 +17,7 @@ const faqs = [
         answer : "The eligibility criteria  vary depending on the lender, but typically include factors such as age, income, credit score, and employment status."
     },
     {
-        question : "How long does it take to get approved for an instant loan?",
+        question : "How long does it take to get approved?",
         answer : "Approval times can vary depending on factors such as the lender's policies and the completeness of your application, but it is usually within a few minutes to a few hours."
     },
     {   question : "How much can I borrow with an instant loan?",
@@ -28,7 +28,7 @@ const faqs = [
         answer : "Interest rates vary depending on the lender, your credit wothiness, and the loan amount and tenure. It is important to copare rates from different lenders before applying."
     },
     {
-        question : "What documents do I need to apply for an instant loan?",
+        question : "What documents do I need to apply?",
         answer : "The required documents may vary depending on the lender, but commonly include proof of identity, address, income and bank statements."
     },
     {
