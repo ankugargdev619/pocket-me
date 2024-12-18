@@ -22,7 +22,7 @@ function HowItWorks(){
             <Step reverse={true} title="Step 2" imgs={["6_CompleteKYC.png","7_Documents.png","8_VerifyPan.png","9_VerifyAadhar.png","10_Selfie.png"]} description={["Complete KYC of your documents","Verify your PAN details","Verify your Aadhar card details","Upload your selfie"]}/>
             <br />
             <br/>
-            <Step reverse={false} title="Step 3" imgs={["11_PersonalDetails.png","12_Dashboard.png"]} description={["Upload your personal details","You can apply easily once you are approved"]} />
+            <Step reverse={false} title="Step 3" imgs={["11_PersonalDetails.png","12_Dashboard.png"]} description={["Upload your personal details","Apply easily once you are approved"]} />
         </div>
     </div>
 }
