@@ -6,7 +6,7 @@ function DownloadBanner(){
             <p className="text-white">Your Personal Loan App</p>
             <p>Instantly withdraw money from your credit limit of up to ₹1,00,000! No paperwork, ever</p>
             <div className="flex gap-10 justify-center mt-10">
-                    <a className="mw-10" href="#">
+                    <a className="mw-10" href="https://t.ly/r8itP">
                         <img src="/google-play.png" alt="" />
                     </a>
                     {/*<a href="#">
