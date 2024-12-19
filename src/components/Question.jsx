@@ -33,7 +33,7 @@ export const Question = (props) => {
                             delay:0,
                             ease : 'easeInOut'
                         }}
-                        className="text-lg px-6 ">
+                        className="text-lg px-6 overflow-hidden">
                     
                     {props.answer}
                 </motion.div>}
